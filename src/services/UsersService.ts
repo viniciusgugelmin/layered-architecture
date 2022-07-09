@@ -1,7 +1,7 @@
 import * as usersRepository from "../repositories/UsersRepository.js";
 import User from "../models/User.js";
-import verifyUserExists from "../utils/verifyUserExists";
-import verifyIsUserEmailAlreadyInUse from "../utils/verifyIsUserEmailAlreadyInUse";
+import verifyUserExists from "../utils/verifyUserExists.js";
+import verifyIsUserEmailAlreadyInUse from "../utils/verifyIsUserEmailAlreadyInUse.js";
 
 export async function getUsers(): Promise<User[]> {
   return await usersRepository.findAll();
