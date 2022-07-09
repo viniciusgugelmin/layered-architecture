@@ -17,6 +17,7 @@ export async function getUser(req: Request, res: Response) {
 
 export async function updateUser(req: Request, res: Response) {
   const { id } = req.params;
+
   await usersService.updateUser({ ...req.body, id: parseInt(id) });
 
   res.json(new ResponseModel("User updated successfully"));
